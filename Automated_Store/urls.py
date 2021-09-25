@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import urls
 
 admin.site.site_header = 'Automated Store KUST, Wudil'
 admin.site.index_title = 'Automated Store'
@@ -24,5 +25,6 @@ admin.site.site_title = 'KUST, Wudil'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('Users.urls'))
+    path('accounts/', include('Users.urls')),
+    path('', include('Store.urls'))
 ]

@@ -1,5 +1,5 @@
 from django.db import models
-from Users.models import Faculties
+from Users.models import StoreUser
 # Create your models here.
 
 
@@ -17,7 +17,7 @@ class Item(models.Model):
         self.quantity.save()
         return True
 
-    def add_uantity(self, quantity):
+    def add_quantity(self, quantity):
         self.quantity += quantity
         self.quantity.save()
         return True
@@ -34,7 +34,7 @@ class Store(models.Model):
 class Request(models.Model):
     product = models.ForeignKey(Item, related_name='product', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
-    faculty = models.ForeignKey(Faculties, on_delete=models.CASCADE, related_name='faculty')
+    faculty = models.ForeignKey(StoreUser, on_delete=models.CASCADE, related_name='faculty')
 
 
     def record(self, u):
@@ -47,3 +47,4 @@ class Record(models.Model):
     def __str__(self):
         return str(self.request.faculty.faculty_name) + 'collected' + str(self.request.quantity)  \
                             + str(self.request.product.name)
+

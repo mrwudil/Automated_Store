@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-grx@9w$ps#y^%r_^rqeuseo!%^il@^j(2ig_6fop^5%bwdzm$k
 DEBUG = True
 
 ALLOWED_HOSTS = []
-AUTH_USER_MODEL = 'Users.Faculties'
+AUTH_USER_MODEL = 'Users.StoreUser'
 
 
 
@@ -124,7 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+print(BASE_DIR)
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static/')]
+MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
