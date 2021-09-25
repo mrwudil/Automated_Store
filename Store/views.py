@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_list_or_404
-from .models import Item, Request, Store
+from .models import Item, Request, Store, Record
 from Users.models import Notication
 import time
 
@@ -10,6 +10,10 @@ import time
 def home(request):
     items = Item.objects.all()
     return render(request, 'home.html', {'items': items})
+
+def histoty(request):
+    history = Record.objects.filter(request__faculty=request.user).order_by('-time')
+    return render(request, 'history.html', {"hist": history})
 
 def request_items(request, item_id, quantity):
     user = request.user
@@ -22,7 +26,7 @@ def request_items(request, item_id, quantity):
     elif item.quantity < quantity and item.quantity != 0:
         Request.objects.create(products=item, quanntity=item.quantity, faculty=user)
         item.quantity -= quantity
-        Notifi
+        Notification
         item.save()
     elif item.quantity == 0:
         Notication
@@ -30,7 +34,9 @@ def request_items(request, item_id, quantity):
 def alert(item):
     pass
 
+def search(request):
+    pass
 
-jiegwwjgiojgwgoijwoi
+
 
 
