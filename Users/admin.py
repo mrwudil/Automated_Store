@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Faculties
+from .models import StoreUser
 # Register your models here.
 
 
-admin.site.register(Faculties)
+admin.site.register(StoreUser)
