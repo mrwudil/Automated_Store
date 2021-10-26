@@ -43,58 +43,50 @@
 <div class="container">
 <nav class="navbar navbar-expand-md navbar-light ">
 <a class="navbar-brand" href="index.html">
-<img src="{% img/logon.png" alt="Logo">
+<img src="{% static 'img/logon.png' %}" alt="Logo">
 </a>
 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 <ul class="navbar-nav m-auto">
     <li class="nav-item">
-        <a href="index-3.html" class="nav-link active"> Home </a>
+        <a href="#" class="nav-link active"><b>Home</b>  </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">  Admin
+        <a href="#" class="nav-link"> <b>Admin</b>
         <i class='bx bx-chevron-down'></i>
         </a>
 <ul class="dropdown-menu">
     <li class="nav-item">
-    <a href="{%  url 'admin:login' %}" class="nav-link"> Login </a>
+    <a href="{%  url 'admin:login' %}" class="nav-link"><b> Login</b> </a>
     </li>
 </ul>
     </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link"> Services
-        <i class='bx bx-chevron-down'></i> </a>
-<ul class="dropdown-menu">
-    <li class="nav-item">
-    <a href="service-details.html" class="nav-link"> Service Details </a>
-    </li>
-</ul>
-</li>
+    
 <li class="nav-item">
 <a href="#" class="nav-link">
-Faculties
+<b>Faculties</b>
 <i class='bx bx-chevron-down'></i>
 </a>
 <ul class="dropdown-menu">
 <li class="nav-item">
-<a href="news-1.html" class="nav-link">
-FACULTY OF COMPUTING AND MATHEMATICAL SCIENCES
+<a href="#" class="nav-link">
+<b> FACULTY OF COMPUTING AND MATHEMATICAL SCIENCES </b>
 </a>
 </li>
 <li class="nav-item">
-<a href="news-2.html" class="nav-link">
-FACULTY OF EARTH AND ENVIROMENTAL SCIENCE
+<a href="#" class="nav-link">
+<b> FACULTY OF EARTH AND ENVIROMENTAL SCIENCE </b>
 </a>
 </li>
 <li class="nav-item">
-<a href="news-details.html" class="nav-link">
-FACULTY OF ENGINEERING
+<a href="#" class="nav-link">
+<b> FACULTY OF ENGINEERING </b>
 </a>
 </li>
 </ul>
 </li>
 <li class="nav-item">
-<a href="contact.html" class="nav-link">
-Contact
+<a href="#" class="nav-link">
+<b>Contact</b>
 </a>
 </li>
 </ul>
@@ -177,7 +169,7 @@ Contact
 A digitalized University Procurement system that offers many transformational benefits,
  not least making a Faculties’s operations much more efficient and manageable.</p>
 <div class="banner-btn">
-<a href="html/backend/auth-sign-in.html" class="contact-btn">Log-in</a>
+<a href="#" class="contact-btn">Log-in</a>
 <a href="#" class="get-btn">Register</a>
 </div>
 </div>
@@ -214,16 +206,17 @@ Using principles of acceptable value at best Standards, transparency,
 </li>
  </ul>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non ullamcorper
-tortor, vel mattis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Loyalty and respect for tradition is about a sense of trust 
+    and conformity to the norms and values we cherish as a community.
+</p>
 </p>
 <i class="flaticon-quote client-card-quote"></i>
 <div class="client-card-img">
-<img src="{% img/team/vcs.jfif" alt="Images">
+<img src="{% static 'img/team/vcs.jfif' %}" alt="Images">
 </div>
 </div>
 <div class="client-card">
-<h3>Aminu Bello</h3>
+<h3>Alh. Aminu Bello</h3>
 <span>THE REGISTERER</span>
 <ul>
 <li>
@@ -235,17 +228,17 @@ tortor, vel mattis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing el
 </li>
 </ul>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non ullamcorper
-tortor, vel mattis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Loyalty and respect for tradition is about a sense of trust 
+    and conformity to the norms and values we cherish as a community.
 </p>
 <i class="flaticon-quote client-card-quote"></i>
 <div class="client-card-img">
-<img src="{% img/team/vcs.jfif" alt="Images">
+<img src="{% static 'img/team/vcs.jfif' %}" alt="Images">
 </div>
 </div>
 <div class="client-card">
-<h3>AMINU MUDI</h3>
-<span>Academic Secretary</span>
+<h3>Prof. Tijjani Saleh Bichi</h3>
+<span>The DVC Admin</span>
 <ul>
 <li>
 <i class='bx bxs-star'></i>
@@ -255,12 +248,15 @@ tortor, vel mattis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing el
 </li>
 </ul>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non ullamcorper
-tortor, vel mattis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    The Deputy Vice-Chancellor Administration,
+    Prof. Tijjani Saleh Bichi. attended an International Conference,
+     titled: Train the Trainers Course on Multipurpose Irradiation 
+     Centre as Component of Centre for Nuclear Science and Technology 
+     in Russia in November, 2019.
 </p>
 <i class="flaticon-quote client-card-quote"></i>
 <div class="client-card-img">
-<img src="{% img/team/vcs.jfif" alt="Images">
+<img src="{% static 'img/team/vcs.jfif' %}" alt="Images">
 </div>
 </div>
 </div>
@@ -274,13 +270,17 @@ tortor, vel mattis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing el
 <div class="footer-widget">
 <div class="footer-logo">
 <a href="index.html">
-<img src="{% img/logon.png" alt="Images">
+<img src="{% static 'img/Logon.png' %}" alt="Images">
+
 </a>
 </div>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore dolore magna
+    The mission of Kano University of Science and Technology, Wudil, 
+    is to provide highly skilled manpower through research and training 
+    to meet the challenges of a fast changing world.
 </p>
+<b style="color:#42BD42">KANO UNIVERSITY OF SCEINCE AND TECHNOLOGY WUDIL</b>
+<!--
 <ul class="social-link">
 <li>
 <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
@@ -298,42 +298,38 @@ sed do eiusmod tempor incididunt ut labore dolore magna
 <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
 </li>
 </ul>
+-->
 </div>
 </div>
 <div class="col-lg-2 col-md-6">
-<div class="footer-widget">
-<h3>Useful Links</h3>
-<ul class="footer-list">
-<li>
-<a href="about.html">About Us</a>
-</li>
-<li>
-<a href="services-1.html">Services</a>
-</li>
-<li>
-<a href="projects.html">Projects</a>
-</li>
-<li>
-<a href="case-study.html">Cases</a>
-</li>
-<li>
-<a href="news-1.html">News</a>
-</li>
-</ul>
+    
 </div>
-</div>
+<!--
 <div class="col-lg-3 col-md-6">
 <div class="footer-widget">
-<h3>Contacts</h3>
+<h3>WORKING HOURS</h3>
 <ul class="footer-list-two">
 <li>
 <i class='bx bx-time'></i>
-Sun - Fri: 8.00am - 6.00pm
+MONDAY: 9.00am - 4.30pm
 </li>
 <li>
-<i class='bx bx-location-plus'></i>
-6th Floor, Barbosa, Sydney
+<i class='bx bx-time'></i>
+TUESDAY: 9.00am - 4.30pm
 </li>
+<li>
+<i class='bx bx-time'></i>
+WEDNESDAY: 9.00am - 4.pm
+</li>
+<li>
+<i class='bx bx-time'></i>
+THURSDAY: 9.00am - 4.30pm
+</li>
+<li>
+<i class='bx bx-time'></i>
+FRIDAY: 9.00am - 12.00pm
+</li>
+
 <li>
 <i class='bx bx-phone'></i>
 <a href="tel:+61283171380">+61283171380</a>
@@ -342,26 +338,24 @@ Sun - Fri: 8.00am - 6.00pm
 <i class='bx bx-phone'></i>
 <a href="tel:+61483471680">+61483471680</a>
 </li>
-<li>
-<i class='bx bxs-envelope'></i>
-<a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#761f18101936101f1813155815191b"><span class="__cf_email__" data-cfemail="41282f272e0127282f24226f222e2c">[email&#160;protected]</span></a>
-</li>
+
 </ul>
 </div>
 </div>
 <div class="col-lg-3 col-md-6">
 <div class="footer-widget pl-2">
-<h3>Newsletter</h3>
+<h3>Suggestion</h3>
 <div class="newsletter-area">
 <form class="newsletter-form" data-toggle="validator" method="POST">
-<input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required autocomplete="off">
+<input type="Text" class="form-control" placeholder="Suggestion..." name="EMAIL" required autocomplete="off">
 <button class="default-btn" type="submit">
-Subscribe
+Submit
 </button>
 <div id="validator-newsletter" class="form-result"></div>
 </form>
 </div>
 </div>
+-->
 </div>
 </div>
 </div>
@@ -372,7 +366,7 @@ Subscribe
 <div class="container">
 <div class="copy-right-text text-center">
 <p>
-Copyright ©2021 Finec. All Rights Reserved by
+Copyright ©2021. All Rights Reserved by
 <a href="home-3.html" target="_blank">KUST WUDIL STORE PROCUREMENT DEPARTMENT</a>
 </p>
 </div>
