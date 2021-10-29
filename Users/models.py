@@ -11,6 +11,7 @@ class StoreUser(AbstractUser):
     phone = models.BigIntegerField(default=0)
 
 
-class Notication(models.Model):
+class Notification(models.Model):
     text = models.TextField()
     faculty = models.ForeignKey(StoreUser, on_delete=models.CASCADE)
+    viewed = models.BooleanField(default=True)

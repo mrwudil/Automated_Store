@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import urls
+from django.conf.urls.static import static
+from django.conf import settings
 
 admin.site.site_header = 'Automated Store KUST, Wudil'
 admin.site.index_title = 'Automated Store'
@@ -27,4 +29,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('Users.urls')),
     path('', include('Store.urls'))
-]
+] 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

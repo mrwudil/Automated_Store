@@ -1,0 +1,106 @@
+{% extends 'base.html' %} {% load static %}
+<!-- Main -->
+{% block content %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/request.css' %}" />
+</head>
+<div class="container">
+  <div class="row">
+    {% for item in items %}
+    <div class="col">
+      <div class="card" style="width: 20rem; margin: 6px">
+        <img
+          class="card-img-top"
+          src="{{ item.image.url }}"
+          alt="Card image cap"
+        />
+        <div class="card-block">
+          <h4 class="card-title">{{ item.name }}</h4>
+          <p class="card-text" id="{{ item.quantity }}">
+            {{ item.quantity }} Left
+          </p>
+          <div class="row">
+            <input
+              type="number"
+              class="request-quantity"
+              min="1"
+              max="{{ item.quantity }}"
+              name=""
+              id="item-{{ item.quantity }}"
+              placeholder="enter value"
+            />
+            <button
+              class="request-btn btn btn-primary"
+              onclick="request('{{ item.id }}', '{{ item.quantity }}')"
+            >
+              Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="cart"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table"></table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="submit-request"><a href="#">Submit</a></div>
+<script>
+  function request(item_id, quantity) {
+    theName = "#item-" + quantity;
+    let myValue = $(theName).val();
+    console.log(myValue);
+    $.ajax({
+      url: "give-me/" + item_id + "/" + myValue,
+
+      success: function (result) {
+        console.log("yayi");
+        let prevQuant = document.getElementById(quantity).innerText;
+        let quntInt = parseInt(quantity);
+        console.log(parseInt(document.getElementById(quantity).innerText));
+        // document.getElementById(quantity).innerText = prevQuant - quntInt;
+        console.log(prevQuant - quntInt);
+      },
+      error: function (params) {
+        console.log("bai ba");
+        console.log(theName);
+      },
+    });
+  }
+  function showMessage(params) {}
+</script>
+{% endblock %}

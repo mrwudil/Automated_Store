@@ -1,4 +1,5 @@
 <!doctype html>
+{% extends 'base.html' %}
 {% load static %}
 <html>
 
@@ -7,168 +8,11 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
-<link rel="stylesheet" href="{% static 'fonts/flaticon.css' %}">
-<link rel="stylesheet" href="{% static 'css/boxicons.min.css' %}">
-<link rel="stylesheet" href="{%  static 'css/owl.carousel.min.css' %}">
-<link rel="stylesheet" href="{%  static 'css/owl.theme.default.min.css' %}">
-<link rel="stylesheet" href="{%  static 'css/magnific-popup.css' %}">
-<link rel="stylesheet" href="{%  static 'css/meanmenu.css' %}">
-<link rel="stylesheet" href="{%  static 'css/nice-select.min.css' %}">
-<link rel="stylesheet" href="{%  static 'css/style.css' %}">
-<link rel="stylesheet" href="{%  static 'css/responsive.css' %}">
-<title>KUST WUDIL STORE PROCUREMENT  SYSTEM</title>
-<link rel="icon" type="image/png" href="{% static 'img/Logon.png' %}">
+<title>{% block title %} KUST WUDIL STORE PROCUREMENT  SYSTEM {% endblock %}</title>
 </head>
 <body>
 
-<div class="preloader">
-<div class="d-table">
-<div class="d-table-cell">
-<div class="spinner"></div>
-</div>
-</div>
-</div>
-
-<div class="navbar-area">
-
-<div class="mobile-nav">
-<a href="index-3.html" class="logo">
-<img src="{% static 'img/Logon.png' %}" alt="Logo">
-</a>
-</div>
-
-<div class="main-nav">
-<div class="container">
-<nav class="navbar navbar-expand-md navbar-light ">
-<a class="navbar-brand" href="index.html">
-<img src="{% img/logon.png" alt="Logo">
-</a>
-<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-<ul class="navbar-nav m-auto">
-    <li class="nav-item">
-        <a href="index-3.html" class="nav-link active"> Home </a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">  Admin
-        <i class='bx bx-chevron-down'></i>
-        </a>
-<ul class="dropdown-menu">
-    <li class="nav-item">
-    <a href="{%  url 'admin:login' %}" class="nav-link"> Login </a>
-    </li>
-</ul>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link"> Services
-        <i class='bx bx-chevron-down'></i> </a>
-<ul class="dropdown-menu">
-    <li class="nav-item">
-    <a href="service-details.html" class="nav-link"> Service Details </a>
-    </li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="#" class="nav-link">
-Faculties
-<i class='bx bx-chevron-down'></i>
-</a>
-<ul class="dropdown-menu">
-<li class="nav-item">
-<a href="news-1.html" class="nav-link">
-FACULTY OF COMPUTING AND MATHEMATICAL SCIENCES
-</a>
-</li>
-<li class="nav-item">
-<a href="news-2.html" class="nav-link">
-FACULTY OF EARTH AND ENVIROMENTAL SCIENCE
-</a>
-</li>
-<li class="nav-item">
-<a href="news-details.html" class="nav-link">
-FACULTY OF ENGINEERING
-</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="contact.html" class="nav-link">
-Contact
-</a>
-</li>
-</ul>
-<div class="others-options d-flex align-items-center">
-<div class="option-item">
-<i class='search-btn bx bx-search'></i>
-<i class='close-btn bx bx-x'></i>
-<div class="search-overlay search-popup">
-<div class='search-box'>
-<form class="search-form">
-<input class="search-input" name="search" placeholder="Search" type="text">
-<button class="search-button" type="submit">
-<i class="bx bx-search"></i>
-</button>
-</form>
-</div>
- </div>
-</div>
-<div class="option-item">
-<div class="menu-icon d-in-line">
-<a href="#" class="burger-menu menu-icon-two">
-<i class='flaticon-menu'></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</nav>
-</div>
-</div>
-<div class="side-nav-responsive">
-<div class="container">
-<div class="dot-menu">
-<div class="circle-inner">
-<div class="circle circle-one"></div>
-<div class="circle circle-two"></div>
-<div class="circle circle-three"></div>
-</div>
-</div>
-<div class="container">
-<div class="side-nav-inner">
-<div class="side-nav justify-content-center align-items-center">
-<div class="side-item">
-<div class="option-item">
-<div class="menu-icon d-in-line">
-<a href="#" class="burger-menu menu-icon-two">
-<i class='flaticon-menu'></i>
-</a>
-</div>
-</div>
-</div>
-<div class="side-item">
-<div class="option-item">
-<i class='search-btn bx bx-search'></i>
-<i class='close-btn bx bx-x'></i>
-<div class="search-overlay search-popup">
-<div class='search-box'>
-<form class="search-form">
-<input class="search-input" name="search" placeholder="Search" type="text">
-<button class="search-button" type="submit">
-<i class="bx bx-search"></i>
-</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
+{% block content %}
 <div class="banner-area-three banner-bg">
 <div class="container">
 <div class="banner-content banner-content-three">
@@ -177,8 +21,8 @@ Contact
 A digitalized University Procurement system that offers many transformational benefits,
  not least making a Faculties’s operations much more efficient and manageable.</p>
 <div class="banner-btn">
-<a href="html/backend/auth-sign-in.html" class="contact-btn">Log-in</a>
-<a href="#" class="get-btn">Register</a>
+<a href="/accounts/login" class="contact-btn">Log-in</a>
+<a href="{% url 'users:signup' %}" class="get-btn">Register</a>
 </div>
 </div>
 </div>
@@ -267,140 +111,7 @@ tortor, vel mattis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing el
 </div>
 </div>
 <hr>
-<footer class="footer-area pt-100 pb-70">
-<div class="container">
-<div class="row">
-<div class="col-lg-4 col-md-6">
-<div class="footer-widget">
-<div class="footer-logo">
-<a href="index.html">
-<img src="{% img/logon.png" alt="Images">
-</a>
-</div>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore dolore magna
-</p>
-<ul class="social-link">
-<li>
-<a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
-</li>
-<li>
-<a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
-</li>
-<li>
-<a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
-</li>
-<li>
-<a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
-</li>
-<li>
-<a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-lg-2 col-md-6">
-<div class="footer-widget">
-<h3>Useful Links</h3>
-<ul class="footer-list">
-<li>
-<a href="about.html">About Us</a>
-</li>
-<li>
-<a href="services-1.html">Services</a>
-</li>
-<li>
-<a href="projects.html">Projects</a>
-</li>
-<li>
-<a href="case-study.html">Cases</a>
-</li>
-<li>
-<a href="news-1.html">News</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="footer-widget">
-<h3>Contacts</h3>
-<ul class="footer-list-two">
-<li>
-<i class='bx bx-time'></i>
-Sun - Fri: 8.00am - 6.00pm
-</li>
-<li>
-<i class='bx bx-location-plus'></i>
-6th Floor, Barbosa, Sydney
-</li>
-<li>
-<i class='bx bx-phone'></i>
-<a href="tel:+61283171380">+61283171380</a>
-</li>
-<li>
-<i class='bx bx-phone'></i>
-<a href="tel:+61483471680">+61483471680</a>
-</li>
-<li>
-<i class='bx bxs-envelope'></i>
-<a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#761f18101936101f1813155815191b"><span class="__cf_email__" data-cfemail="41282f272e0127282f24226f222e2c">[email&#160;protected]</span></a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="footer-widget pl-2">
-<h3>Newsletter</h3>
-<div class="newsletter-area">
-<form class="newsletter-form" data-toggle="validator" method="POST">
-<input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required autocomplete="off">
-<button class="default-btn" type="submit">
-Subscribe
-</button>
-<div id="validator-newsletter" class="form-result"></div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
-
-
-<div class="copy-right-area">
-<div class="container">
-<div class="copy-right-text text-center">
-<p>
-Copyright ©2021 Finec. All Rights Reserved by
-<a href="home-3.html" target="_blank">KUST WUDIL STORE PROCUREMENT DEPARTMENT</a>
-</p>
-</div>
-</div>
-</div>
-
-
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
-
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-
-<script src="{% static 'js/owl.carousel.min.js' %}"></script>
-
-<script src="{% static 'js/wow.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-
-<script src="{% static 'js/meanmenu.js' %}"></script>
-
-<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-
-<script src="{% static 'js/form-validator.min.js' %}"></script>
-
-<script src="{% static 'js/contact-form-script.js' %}"></script>
-
-<script src="{% static 'js/custom.js' %}"></script>
+{% endblock %}
 </body>
 
 </html>
